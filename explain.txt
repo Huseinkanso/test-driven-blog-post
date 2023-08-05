@@ -1,0 +1,36 @@
+1)test
+    we can run the test by ::: vendor\bin\phpunit
+2)test one specific function
+    // in path we need to escape \ so \\
+    vendor\bin\phpunit --filter 'path\\'
+    // single function in file will be called as abstract
+    vendor\bin\phpunit --filter 'path\\::function'
+3)))there is extention to help testing called better phpunit
+if we want to test file we to go the file and ctrl+shift+p +++ better phpunit run
+    -- if one function we go put cursor  to the function
+4)every function should prefix test firstname
+    ---- or initialize /**  @test */ before the test
+5)generatekey (without give error no encryption key in test)
+    ---php artisan key:generate
+
+6)create files work
+// -m migration
+// -f factory
+// -s seeders
+// name -m -f -s
+// name -mf // this will create model factory migration
+// name -a  =>all
+php artisan make:model name -mf
+
+7) in many to many relationship the names of the relational tables is necessarly like this
+if we have blogs and tag (alphabetical) so name is blog_tag
+so creation like this
+php artisan make:migration CreateBlogTagTable
+
+8) create policy to give authorization to user and what he can do
+php artisan make:policy BlogPolicy
+php artisan make:policy PostPolicy --model=Post   // this will define the function used in the model controller
+
+213
+213
+213
